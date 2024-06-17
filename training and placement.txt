@@ -1,0 +1,44 @@
+{
+  "Company Name / Resource Person": [
+    {
+      "Name": "Aptitude Training",
+      "Description": "Career Launcher (a part of CL Educate Ltd) focuses on diverse segments of learners across multiple age groups. Led by a team of highly qualified professionals, including IIT-IIM alumni, with a passion for excellence in education.",
+      "Date of conduction": "Since 2019"
+    },
+    {
+      "Name": "AMCAT Test",
+      "Description": "AMCAT (Aspiring Minds Computer Adaptive Assessment) is India’s largest Employability Assessment and is recognized by over many companies. AMCAT gives candidates detailed feedback of their employability (seven stroke feedback) and helps connect them to over 40,000 entry level jobs every year.",
+      "Date of conduction": "Since 2019"
+    },
+    {
+      "Name": "Aptitude Test Series",
+      "Description": "CoCubes is India’s leading assessment and hiring platform. They run assessments to measure employability across all domains – from programming to plumbing. CoCubes schedules regular aptitude exams and its assessments for our students all round the year.",
+      "Date of conduction": "Since 2017"
+    },
+    {
+      "Name": "MaTPO Aptitude Idol-2019",
+      "Description": "Maharashtra Association of TPOs (MaTPO) organized the Online Aptitude Test to improve Employability of students so that these students can get better employability exposure. MaTPO APTITUDE IDOL-2019 Round I was scheduled on 22nd July, 2019. Total 331 final year students from all branches of VCET participated in the round.",
+      "Date of conduction": "2019-20"
+    },
+    {
+      "Name": "Refresher Course on Technical interview Preparation",
+      "Description": "Refresher courses for enhancing basic programming skills and skills pertaining to the program are organized by the “Training & Placement Cell.” These courses focus on reviewing and updating knowledge and skills required for clearing the aptitude. VCET Faculties conducts refreshers course for students of all the branches every year.",
+      "Date of conduction": "Every Year"
+    },
+    {
+      "Name": "Aptitude Training by Campus Credentials",
+      "Description": "Campus Credential is a training institute and has established itself as Forerunner in Competitive Exam training. Students in the Year 2017-18 & 2018-19 received aptitude training from this company.",
+      "Date of conduction": "2017 to 2019"
+    },
+    {
+      "Name": "Mock Interview",
+      "Description": "Mock Interview sessions were organized at VCET for helping student getting hands on experience for facing the interviewers face to face and tackle difficult questions. Every year mock interviews are arranged in odd semesters to train students for interview process.",
+      "Date of conduction": "Every Year"
+    },
+    {
+      "Name": "IMS",
+      "Description": "IMS is a training institute for Competitive Exam training. Students in the Year 2014-15 & 2016-17 received aptitude training from this company.",
+      "Date of conduction": "N/A"
+    }
+  ]
+}
