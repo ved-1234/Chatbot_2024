@@ -1,0 +1,267 @@
+{
+  "sem-2": [
+    {
+      "Code": "FEC203",
+      "Name": "ENGINEERING CHEMISTRY-II (TH)",
+      "Sessions": 24,
+      "Credits": 2.0,
+      "Faculty Name": "Ms.Beauty Iftekhar Ansari"
+    },
+    {
+      "Code": "FEC204",
+      "Name": "ENGINEERING GRAPHICS (TH)",
+      "Sessions": 24,
+      "Credits": 2.0,
+      "Faculty Name": "Ms.Priti Shashikant Vairagi"
+    },
+    {
+      "Code": "FEC201 TH",
+      "Name": "ENGINEERING MATHEMATICS-II (TH)",
+      "Sessions": 36,
+      "Credits": 3.0,
+      "Faculty Name": "Prof.Dorill Snedden Almeida"
+    },
+    {
+      "Code": "FEC202",
+      "Name": "ENGINEERING PHYSICS-II (TH)",
+      "Sessions": 24,
+      "Credits": 2.0,
+      "Faculty Name": "Dr.Suraj Bachhelal Vishwakarma"
+    },
+    {
+      "Code": "FEC206",
+      "Name": "PROFESSIONAL COMMUNICATION AND ETHICS-I (TH)",
+      "Sessions": 24,
+      "Credits": 2.0,
+      "Faculty Name": "Mrs.Kamini Vaibhav More"
+    },
+    {
+      "Code": "FEL206",
+      "Name": "BASIC WORKSHOP PRACTICE-II (PR)",
+      "Sessions": 12,
+      "Credits": 1.0,
+      "Faculty Name": "Mr.Dipak Janardan Choudhari"
+    },
+    {
+      "Code": "FEL204",
+      "Name": "C PROGRAMMING (PR)",
+      "Sessions": 12,
+      "Credits": 1.0,
+      "Faculty Name": "Ms.Shreya Anand Sankhe"
+    },
+    {
+      "Code": "FEL202",
+      "Name": "ENGINEERING CHEMISTRY-II (PR)",
+      "Sessions": 12,
+      "Credits": 0.5,
+      "Faculty Name": "Ms.Beauty Iftekhar Ansari"
+    },
+    {
+      "Code": "FEL203",
+      "Name": "ENGINEERING GRAPHICS (PR)",
+      "Sessions": 12,
+      "Credits": 2.0,
+      "Faculty Name": "Ms.Priti Shashikant Vairagi"
+    },
+    {
+      "Code": "FEC201 TUT",
+      "Name": "ENGINEERING MATHEMATICS-II (TUT)",
+      "Sessions": 12,
+      "Credits": 1.0,
+      "Faculty Name": "Prof.Dorill Snedden Almeida"
+    },
+    {
+      "Code": "FEL201",
+      "Name": "ENGINEERING PHYSICS-II (PR)",
+      "Sessions": 12,
+      "Credits": 0.5,
+      "Faculty Name": "Dr.Suraj Bachhelal Vishwakarma"
+    },
+    {
+      "Code": "FEL205",
+      "Name": "PROFESSIONAL COMMUNICATION AND ETHICS-I (PR)",
+      "Sessions": 12,
+      "Credits": 1.0,
+      "Faculty Name": "Mrs.Kamini Vaibhav More"
+    }
+  ],
+  "sem-3": [
+    {
+      "Code": "CSC301 TH",
+      "Name": "Applied Mathematics-III(Th)",
+      "Sessions": 42,
+      "Credits": 3.0,
+      "Faculty Name": "Mr.Mayur Kantilal Gohil"
+    },
+    {
+      "Code": "CSC305",
+      "Name": "Computer Graphics(Th)",
+      "Sessions": 42,
+      "Credits": 3.0,
+      "Faculty Name": "Mr.Sunil Namdeorao Katkar"
+    },
+    {
+      "Code": "CSC303",
+      "Name": "Data Structure(Th)",
+      "Sessions": 42,
+      "Credits": 3.0,
+      "Faculty Name": "Mrs.Smita Kiran Jawale"
+    },
+    {
+      "Code": "CSC304",
+      "Name": "Digital Logic and Computer Architecture(Th)",
+      "Sessions": 42,
+      "Credits": 3.0,
+      "Faculty Name": "Ms.Neha Rohan Surti"
+    },
+    {
+      "Code": "CSC302",
+      "Name": "Discrete Structure and Graph Theory(Th)",
+      "Sessions": 42,
+      "Credits": 3.0,
+      "Faculty Name": "Dr.Megha Vishnuprasad Trivedi, Mrs.Akshaya Yogendra Prabhu"
+    },
+    {
+      "Code": "CSM301",
+      "Name": "Mini Project - 1A(Pr)",
+      "Sessions": 56,
+      "Credits": 2.0,
+      "Faculty Name": "Mrs.Smita Kiran Jawale"
+    },
+    {
+      "Code": "CSL304 TH",
+      "Name": "Object Oriented Programming with Java",
+      "Sessions": 28,
+      "Credits": 0.0,
+      "Faculty Name": "Ms.Priyanka Bolinjkar"
+    },
+    {
+      "Code": "CSC301 TUT",
+      "Name": "Applied Mathematics-III(Tut)",
+      "Sessions": 28,
+      "Credits": 1.0,
+      "Faculty Name": "Mr.Mayur Kantilal Gohil"
+    },
+    {
+      "Code": "CSL301",
+      "Name": "Data Structure Lab(Pr)",
+      "Sessions": 28,
+      "Credits": 1.0,
+      "Faculty Name": "Mrs.Smita Kiran Jawale"
+    },
+    {
+      "Code": "CSL302",
+      "Name": "Digital Logic and Computer Architecture Lab(Pr)",
+      "Sessions": 28,
+      "Credits": 1.0,
+      "Faculty Name": "Ms.Neha Rohan Surti"
+    },
+    {
+      "Code": "CSL304 PR",
+      "Name": "Object Oriented Programming with Java(Pr)",
+      "Sessions": 50,
+      "Credits": 2.0,
+      "Faculty Name": "Ms.Priyanka Bolinjkar"
+    },
+    {
+      "Code": "CSL303",
+      "Name": "Computer Graphics Lab(Pr)",
+      "Sessions": 28,
+      "Credits": 1.0,
+      "Faculty Name": "Mr.Sunil Namdeorao Katkar"
+    }
+  ],
+  "sem-4": [
+    {
+      "Code": "CSC402",
+      "Name": "Analysis of Algorithm(Th)",
+      "Sessions": 36,
+      "Credits": 3.0,
+      "Faculty Name": "Dr.Swapna Sanjay Borde"
+    },
+    {
+      "Code": "CSC401 TH",
+      "Name": "Applied Mathematics-IV(Th)",
+      "Sessions": 36,
+      "Credits": 3.0,
+      "Faculty Name": "Ms.Deepika M Panchal"
+    },
+    {
+      "Code": "CSC403",
+      "Name": "Database Management System(Th)",
+      "Sessions": 36,
+      "Credits": 3.0,
+      "Faculty Name": "Ms.Priyanka Bolinjkar"
+    },
+    {
+      "Code": "CSC405",
+      "Name": "Microprocessor(Th)",
+      "Sessions": 42,
+      "Credits": 3.0,
+      "Faculty Name": "Mr.Sunil Namdeorao Katkar"
+    },
+    {
+      "Code": "CSM401",
+      "Name": "Mini Project 1-B",
+      "Sessions": 48,
+      "Credits": 2.0,
+      "Faculty Name": "Ms.Priyanka Bolinjkar"
+    },
+    {
+      "Code": "CSC404",
+      "Name": "Operating System(Th)",
+      "Sessions": 42,
+      "Credits": 3.0,
+      "Faculty Name": "Dr.Dinesh Nathu Patil"
+    },
+    {
+      "Code": "CSL405",
+      "Name": "Skill Base Lab Course Python Programming (TH)",
+      "Sessions": 28,
+      "Credits": 0.0,
+      "Faculty Name": "Dr.Megha Vishnuprasad Trivedi"
+    },
+    {
+      "Code": "CSL401",
+      "Name": "Analysis of Algorithm Lab(Pr)",
+      "Sessions": 14,
+      "Credits": 1.0,
+      "Faculty Name": "Dr.Swapna Sanjay Borde"
+    },
+    {
+      "Code": "CSL404",
+      "Name": "Microprocessor Lab(Pr)",
+      "Sessions": 12,
+      "Credits": 1.0,
+      "Faculty Name": "Mr.Sunil Namdeorao Katkar"
+    },
+    {
+      "Code": "CSC401 TUT",
+      "Name": "Applied Mathematics-IV (Tut)",
+      "Sessions": 12,
+      "Credits": 1.0,
+      "Faculty Name": "Ms.Ankita Ravindra Mane"
+    },
+    {
+      "Code": "CSL402",
+      "Name": "Database Management System Lab(Pr)",
+      "Sessions": 14,
+      "Credits": 1.0,
+      "Faculty Name": "Ms.Priyanka Bolinjkar"
+    },
+    {
+      "Code": "CSL405",
+      "Name": "Skill Base Lab Course Python Programming(Pr)",
+      "Sessions": 48,
+      "Credits": 2.0,
+      "Faculty Name": "Dr.Megha Vishnuprasad Trivedi"
+    },
+    {
+      "Code": "CSL403",
+      "Name": "Operating System Lab(Pr)",
+      "Sessions": 14,
+      "Credits": 1.0,
+      "Faculty Name": "Dr.Dinesh Nathu Patil"
+    }
+  ]
+}

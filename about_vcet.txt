@@ -1,0 +1,21 @@
+{
+  "name": "Vidyavardhini’s College of Engineering and Technology, Vasai",
+  "established": "1970",
+  "founded_by": "Late Padmashri H. G. alias Bhausaheb Vartak",
+  "location": {
+    "address": "Vidyavardhini, Vasai Road (W), Vasai, Mumbai",
+    "campus_area_acres": 12.27,
+    "proximity": "2 minutes walk from Vasai Road (W) Railway Station"
+  },
+  "affiliation": {
+    "affiliated_to": "University of Mumbai",
+    "degree_program": "Bachelor of Engineering (4 year degree program)"
+  },
+  "approvals": [
+    {
+      "approval_body": "AICTE",
+      "approval_date": "July 1994"
+    }
+  ],
+  "vision": "To enhance knowledge and provide quality education, particularly in rural areas."
+}
