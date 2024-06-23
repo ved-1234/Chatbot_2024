@@ -1,0 +1,89 @@
+{                                     #commitee
+  "Designation In Society": [
+    {
+      "Name": "Dr. Harish Vankudre",
+      "Email": "principal@vcet.edu.in",
+      "Position": "Patron"
+    },
+    {
+      "Name": "Ms. Kanchan Sarmalkar",
+      "Email": "kanchan.patlekar@vcet.edu.in",
+      "Position": "President"
+    },
+    {
+      "Name": "Mr. Bhavik Shah",
+      "Email": "sbhavik@gmail.com",
+      "Position": "Vice-President"
+    },
+    {
+      "Name": "Mr. Swapnil Karvir",
+      "Email": "swapnilkarvir@gmail.com",
+      "Position": "Secretary"
+    },
+    {
+      "Name": "Dr. Ashish Vanmali",
+      "Email": "ashish.vanmali@vcet.edu.in",
+      "Position": "Treasurer"
+    },
+    {
+      "Name": "Dr. Sunayana Jadhav",
+      "Email": "sunayana.jadhav@vcet.edu.in",
+      "Position": "Member"
+    },
+    {
+      "Name": "Ms. Angha Patil",
+      "Email": "anagha.patil@vcet.edu.in",
+      "Position": "Member"
+    },
+    {
+      "Name": "Mr. Harmesh Vanmali",
+      "Email": "vanmali.harmesh@gmail.com",
+      "Position": "Member"
+    }
+  ]
+}
+#alumini
+
+{
+  "Designation In Society": [
+    {
+      "Name": "Dr. Archana Ekbote",
+      "Position": "Dean Alumni"
+    },
+    {
+      "Name": "Ms. Kanchan Sarmalkar",
+      "Position": "Co-ordinator (Instrumentation Engineering)"
+    },
+    {
+      "Name": "Mr. Sanjay Lohar",
+      "Position": "Co-ordinator (Mechanical Engineering)"
+    },
+    {
+      "Name": "Ms. Ashwini Katkar",
+      "Position": "Co-ordinator (Electronics and Telecommunication Engineering)"
+    },
+    {
+      "Name": "Dr. Swapna Borde",
+      "Position": "Co-ordinator (Computer Engineering)"
+    },
+    {
+      "Name": "Ms. Anagha Patil",
+      "Position": "Co-ordinator (Information Technology)"
+    },
+    {
+      "Name": "Mr. Viren Chandanshive",
+      "Position": "Co-ordinator (Civil Engineering)"
+    },
+    {
+      "Name": "Ms. Krunali Vartak",
+      "Position": "Co-ordinator (Computer Science Engineering (Data Science))"
+    },
+    {
+      "Name": "Mr. Raunak Joshi",
+      "Position": "Co-ordinator (Artificial Intelligence and Data Science)"
+    }
+  ]
+}
+
+
+

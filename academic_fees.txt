@@ -1,0 +1,43 @@
+[
+  {
+    "Fee Structure Name": "COMP 2022-2026 Second year",
+    "Admission Type": "Centralized Admission Process (CAP)",
+    "Admission Category": "Open",
+    "Fee Structure Year": "2023-2024",
+    "Total Fees (In ₹)": "₹1,20,563.00",
+    "Paid Amount (In ₹)": "₹1,20,563.00",
+    "Concession (In ₹)": "₹0.00",
+    "Government Liability (In ₹)": "₹0.00",
+    "Student Receivable (In ₹)": "₹0.00",
+    "Student Payable (In ₹)": "₹0.00",
+    "Sponsorship Receivable (In ₹)": "₹0.00",
+    "Sponsorship Received (In ₹)": "₹0.00",
+    "Generate Invoice": ""
+  },
+  {
+    "Fee Structure Name": "COMP 2022-2026 First year",
+    "Admission Type": "Centralized Admission Process (CAP)",
+    "Admission Category": "Open",
+    "Fee Structure Year": "2022-2023",
+    "Total Fees (In ₹)": "₹1,21,934.00",
+    "Paid Amount (In ₹)": "₹1,21,934.00",
+    "Concession (In ₹)": "₹0.00",
+    "Government Liability (In ₹)": "₹0.00",
+    "Student Receivable (In ₹)": "₹0.00",
+    "Student Payable (In ₹)": "₹0.00",
+    "Sponsorship Receivable (In ₹)": "₹0.00",
+    "Sponsorship Received (In ₹)": "₹0.00",
+    "Generate Invoice": ""
+  },
+  {
+    "Fee Structure Name": "Total",
+    "Total Fees (In ₹)": "₹2,42,497.00",
+    "Paid Amount (In ₹)": "₹2,42,497.00",
+    "Concession (In ₹)": "₹0.00",
+    "Government Liability (In ₹)": "₹0.00",
+    "Student Receivable (In ₹)": "₹0.00",
+    "Student Payable (In ₹)": "₹0.00",
+    "Sponsorship Receivable (In ₹)": "₹0.00",
+    "Sponsorship Received (In ₹)": "₹0.00"
+  }
+]
