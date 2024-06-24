@@ -1,0 +1,21 @@
+{
+  "FE Orientation": {
+    "Description": "A formal meet is arranged for the FE students where in the convoluted domains pertaining to academics by means of an elaborate overview of the engineering curriculum. An informal orientation is organized by Students’ Council where the freshers are imparted with few tips and tricks to tackle both academics as well as extra-curricular. The students are informed about the various clubs and committees within the college and the events that they participate in and conduct. They are also made familiar with the nearby places of visit and acquainted with the basic rules and regulations of the college. A booklet is also provided to the students which includes the details about the college premises and other information."
+  },
+  "Fresher’s Party": {
+    "Description": "Fresher’s Party’ the first event for the first-year students is hosted by Students’ Council at its apex grandeur and elaboration. The day is marked with pulsating enthusiasm, excitement, and anticipation among all the FE Students. Every year a theme is decided and title for Mr. and Ms. Fresher’s are announced too. Various games and activities are organized wherein the first-year students participate and enjoy to their fullest."
+  },
+  "Teacher’s Day": {
+    "Date": "5th September",
+    "Description": "5th September marks the Birth Anniversary of our former President and renowned teacher Dr. Sarwapalli Radhakrishnan. On this occasion Students’ Council hosts Teacher’s Day celebration keeping up with tradition of VCET, the teachers are welcomed with a rose and a card along with countless number of wishes. The celebration is scheduled in the evening and all the teaching and non-teaching staff are cordially invited for the same. The teachers enjoy the event and eventually engage into quirky and captivating fun games planned for them. The day ends in high spirits and appreciation from Teachers for Councils’ efforts."
+  },
+  "Garba Night": {
+    "Description": "The auspicious festival of Navratri is celebrated by the staffs and students of VCET with great fever and enthusiasm. The event begins with worshipping of Goddess Durga by our Principal, after which the students and teachers dance to the upbeat and traditional Garba tunes played by the DJ. Students dress up beautifully and enjoy the beats with their synchronous and energetic Garba moves. There are prizes for energetic Garba moves and colourful costumes."
+  },
+  "Zeal": {
+    "Description": "The annual cultural fest ZEAL is a fiesta encompassing every form of art be it dance, dramatics, music, literary or fine arts. Zeal cultural festival is made bigger and better with the huge affluence of participants from all over Mumbai, most distinguished judges, and the most electric atmosphere. There are three days of pre-ZEAL including traditional day, formals day and street funk. On the third day of pre-ZEAL, a grand inauguration is held wherein the distinguished and proficient personalities are invited as Chief Guest and Guest of Honour. The Students’ Council then begins preparing for the most anticipated cultural fest, that is ZEAL. When it comes to cultural uplifting, Zeal is certainly one of the highlights of our college. From brainstorming ideas to watching the live streams of ZEAL is an experience that every Students’ Council member will never forget. All in all, the Students’ Council takes immense pride and gratitude for achieving everything that is planned every year with great success and joy."
+  },
+  "BE Farewell": {
+    "Description": "With Zeal being on extravaganza of energy, enthusiasm, and electrifying aura to be in, the cherry on the cake for the Students Council is the BE Farewell. The BE Farewell witnesses an over enthusiastic crowd who with their presence make the atmosphere a heavenly space. The BEs dance and groove their hearts out to the electrifying beats of the DJ and enjoy to their fullest."
+  }
+}
