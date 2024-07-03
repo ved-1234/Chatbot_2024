@@ -1,0 +1,54 @@
+{
+  "Under Graduate Program (UG)": {
+    "Courses": [
+      {
+        "Name of the course": "Computer Engineering",
+        "Approved no. of intake": 180
+      },
+      {
+        "Name of the course": "Computer Science and Engineering (Data Science)",
+        "Approved no. of intake": 180
+      },
+      {
+        "Name of the course": "Information Technology",
+        "Approved no. of intake": 60
+      },
+      {
+        "Name of the course": "Artificial Intelligence and Data Science",
+        "Approved no. of intake": 60
+      },
+      {
+        "Name of the course": "Mechanical Engineering",
+        "Approved no. of intake": 60
+      },
+      {
+        "Name of the course": "Electronics and Telecommunication Engineering",
+        "Approved no. of intake": 60
+      },
+      {
+        "Name of the course": "Civil Engineering",
+        "Approved no. of intake": 60
+      },
+      {
+        "Name of the course": "Electronics Engineering (VLSI Design and Technology)",
+        "Approved no. of intake": 60
+      }
+    ]
+  },
+  "Post Graduate Program (PG)": {
+    "Courses": [
+      {
+        "Name of the course": "Structural Engineering",
+        "Approved no. of intake": 24
+      }
+    ]
+  },
+  "Management Course": {
+    "Courses": [
+      {
+        "Name of the course": "Master Of Management Studies (MMS)",
+        "Approved no. of intake": 120
+      }
+    ]
+  }
+}

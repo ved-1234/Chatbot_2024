@@ -1,0 +1,61 @@
+{
+  "Dr. Harish Vankudre": {
+    "Introduction": "As a proud VCETite, our cherished motto is the ‘overall empowerment of students’ for their all-round development. Today, education means much more than merely acquiring knowledge. Our focus has been on the acquisition of knowledge and skills, building character and improving employability of our young talent. I am sure that VCET’s culture, and an inherent strong foundation that the institution has provided to our these students, has assisted them to march ahead and achieve their educational objectives ensuring a stronger and brighter future.",
+    "Academic Achievements": "This year on the academic front, we were able to maintain the same reputation and promised ourselves to remain consistent throughout the coming years. At the infrastructure level, we have renovated Ground and 1st Floors and renovation of other floors is in progress. In addition to that there are many more changes that surely added a class in the ambience of VCET.",
+    "Community Services": "I am also proud to share that this year we wholeheartedly responded to the appeal from the government to contribute to the society with open arms and in turn started a community services wing ‘UDAAN’. Throughout the year we followed the ‘Swachha Bhaarat Abhiyaan’ by maintaining personal hygiene, spreading awareness and taking extra efforts to keep our surroundings clean and green. A clothes donation campaign resulted in a great success and trusts like Anand Ashram-Vasai and Dadasaheb Tatke Ashram-Thane benefited a lot. Also our volunteers started teaching Maths and English to students from Swagat Ashram Orphanage, Malad. We also organized a street play under the title “#RespectHer” in college premises. This helped us realize our social responsibilities and the true meaning of being an ‘Indian’.",
+    "Training and Placement": "An excellent track record to mention as part of this year’s achievement was the Training and Placement Committee’s performance. This year, with the whole-hearted support from Management and members of teaching and non-teaching staff including the students, we were able to set a high placement record. This effort was acknowledged by the stalwarts from various companies through their positive feedbacks praising the P.A.T. committee’s hard work and sincere efforts.",
+    "Conclusion": "The measures initiated by the management, the steps taken by college administration, the willing contribution of the teaching and non-teaching staff and the overwhelming response of students and the college activities in the past all vouch for this grand success. With such a steady stream of initiatives taken, it makes me proud to be the principal of this wonderful institution. At this point I would like to appeal to all of you one more time to give your best and make this institution one of the best learning centers among its peers. I wish you all, good luck and greater success in your future endeavors. Proud VCETites, keep that energy and spirit alive as we write more and more of our success stories together.",
+    "Scholarship Details": {
+      "Number of Scholarships": "A maximum of 2000 scholarships (1000 for Degree Students and 1000 for Diploma Students) will be awarded every year to eligible candidates.",
+      "Amount of Scholarship": "Rs. 50,000.00 per annum for every year of study, maximum 4 years duration for Degree students and maximum 3 years for Diploma Students as lump sum amount towards payment of college fee, purchase of computer, stationeries, books, equipment, software etc. No other additional grant will be payable in lieu of hostel charges and medical charges etc.",
+      "Documents Required": [
+        "Death Certificate of Father/Mother or both explicitly mentioning that the death was due to Covid-19.",
+        "If one parent (Father or Mother) is alive, current year income certificate explicitly mentioning that income of family is less than 8 Lakh.",
+        "Bonafide Certificate issued by the institution.",
+        "10+2/equivalent and 10th Mark sheet for Degree Level and 10th /equivalent for Diploma Level.",
+        "Category Certificate (SC/ST/OBC-NCL).",
+        "Candidate Declaration Form, mentioning details as per enclosed format, duly verified by Tehsildar / S D M."
+      ],
+      "Terms and Conditions": [
+        "Applications will be invited once in a year through National e-Scholarship Portal of the Government of India.",
+        "Incomplete applications will be summarily rejected. Only verified online applications will be considered for the award of scholarship.",
+        "If a candidate fails/ drops out in subsequent year, he / she will not be eligible for further scholarship.",
+        "The grant of scholarship is subject to the condition that the student does not receive any financial assistance in shape of scholarship/any emoluments, salary, stipend etc. from any other source during her/ his course of study in the Institute. In case of receipt of any financial assistance from any other sources, the scholarship shall be discontinued and the entire amount of scholarship will have to be refunded to AICTE by D/Draft drawn in favour of 'Member Secretary, AICTE' payable at New Delhi.",
+        "Scheme will be implemented and monitored by the AICTE.",
+        "For converting Cumulative Grade Point Average (CGPA) to percentage, multiplying factor will be 9.5 i.e. to convert the CGPA into percentage; CGPA X 9.5 will give the percentage.",
+        "In case both CGPA & Total marks are given in the mark sheet, total marks will be considered for determining percentage.",
+        "If grades are given like A1, A2, B1, B2 etc. in the mark sheet, first the grades will be converted into CGPA and then average CGPA will be calculated. This CGPA will be converted into percentage as given in point No. 7.",
+        "For the purpose of the calculation of percentage in 10+2, marks secured by candidate in any five subjects taken in 10+2 of various boards (CBSE/ISC etc) to be considered.",
+        "Provisional list of shortlisted candidates will be uploaded on the AICTE web portal. In case, candidate has any query about merit list of scholarship, they may raise their grievances within a month. No query regarding merit list will be entertained after one month duration from the date of publishing of merit list on AICTE website.",
+        "Query regarding non-payment of the scholarship due to invalid/ wrong account number will be entertained only up to six months from the date of publishing of merit list on AICTE website."
+      ],
+      "Renewals": [
+        "The scholarship will be renewed for the next year of study on receipt of renewal through National Scholarship Portal (NSP) by submitting promotion certificate along with bonafide certificate from the Head of the Institution on the NSP portal.",
+        "Student failing to get promoted to the next class/ level or those who are not applying in time for the scholarship, would forfeit the scholarship."
+      ],
+      "Mode of Payment": "After selection, the awardee will be paid scholarship through DBT mode on annual basis."
+    },
+    "Selection Criteria": {
+      "For Degree Level": {
+        "Criteria": "The selection of candidate will be carried out solely on the basis of merit of qualifying examination to pursue the Degree course from any of the AICTE approved institutions i.e. on the basis of percentage of marks obtained in the 10+2/ equivalent examination.",
+        "Method of Resolving Ties": {
+          "Steps": [
+            "Percentage of Marks in 10th Examination: In case qualifying examination percentile does not break ties, then higher percentage of marks in 10th examination will be ranked higher.",
+            "Age: In case 10th examination percentile does not break ties, then the candidate of elder age will be ranked higher.",
+            "Annual family income: If above methods do not break ties, and then the candidate with lower annual family income will be ranked higher."
+          ]
+        }
+      },
+      "For Diploma Level": {
+        "Criteria": "The selection of candidate will be carried out solely on the basis of merit of qualifying examination to pursue the Diploma course from any of the AICTE approved institutions i.e. on the basis of percentage of marks obtained in the 10th / equivalent examination.",
+        "Method of Resolving Ties": {
+          "Steps": [
+            "Age: In case qualifying examination percentile does not break ties, then the candidate of elder age will be ranked higher.",
+            "Annual family income: If above method does not break ties, and then the candidate with lower annual family income will be ranked higher."
+          ]
+        }
+      }
+    },
+    "Reservation": "As per Government of India norms."
+  }
+}
