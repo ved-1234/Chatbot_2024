@@ -9,3 +9,4 @@ langchain-groq
 ollama
 huggingface-hub
 gunicorn
+langchain-core

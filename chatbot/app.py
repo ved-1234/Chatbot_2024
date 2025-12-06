@@ -6,7 +6,9 @@ import os
 from dotenv import load_dotenv
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import OllamaEmbeddings
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
+
+
 from langchain_groq import ChatGroq
 from huggingface_hub import snapshot_download
 
