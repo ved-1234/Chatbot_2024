@@ -1,0 +1,10 @@
+Flask
+Flask-Mail
+python-dotenv
+requests
+faiss-cpu
+langchain
+langchain-community
+langchain-groq
+ollama
+huggingface-hub

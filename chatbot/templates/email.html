@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #26333d, #323741, #21214e);
+        }
+        
+        .wrapper {
+            max-width: 400px;
+            width: 100%;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        h4 {
+            color: #333;
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        form {
+            margin-top: 20px;
+        }
+        
+        input[type="text"], .form-control {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus, .form-control:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        
+        button[type="submit"], .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        button[type="submit"]:hover, .btn:hover {
+            background-color: #0056b3;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        label {
+            display: inline-block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <h4>Email Verification</h4>
+            <form id="emailForm" method="POST" action="{{ url_for('verify') }}">
+                <div class="form-group">
+                    <label for="login">Email</label>
+                    <input type="text" id="login" class="fadeIn second form-control" name="email" placeholder="Email" required>
+                </div>
+                <button type="submit" class="fadeIn fourth btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

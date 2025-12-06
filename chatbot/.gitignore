@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+myenv/
+venv/
+env/
+.env
+faissTrial/
