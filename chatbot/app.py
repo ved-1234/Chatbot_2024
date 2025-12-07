@@ -101,7 +101,7 @@ FAISS_REPO_ID = "ved123456/faiss-chatbot-model"  # ✅ CHANGE THIS
 
 faiss_path = snapshot_download(
     repo_id=FAISS_REPO_ID,
-    repo_type="model",   # or "dataset" depending on how you uploaded
+    repo_type="dataset",   # or "dataset" depending on how you uploaded
     local_dir="faiss_downloaded",
     local_dir_use_symlinks=False
 )
