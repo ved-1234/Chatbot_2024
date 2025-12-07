@@ -97,7 +97,7 @@ embeddings = OllamaEmbeddings(model='nomic-embed-text')
 # Download FAISS index from Hugging Face
 # -------------------------------------
 
-FAISS_REPO_ID = "ved123456/faiss-chatbot-model"  # ✅ CHANGE THIS
+FAISS_REPO_ID = "ved123456/faiss-chatbot-index"  # ✅ CHANGE THIS
 
 faiss_path = snapshot_download(
     repo_id=FAISS_REPO_ID,
