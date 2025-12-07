@@ -67,7 +67,7 @@ def verify():
     session['otp'] = otp
     msg = Message('OTP', sender=app.config['MAIL_USERNAME'], recipients=[gmail])
     msg.body = str(otp)
-    mail.send(msg)
+    # mail.send(msg)
     return render_template("verify.html", email=gmail)
 
 
