@@ -16,13 +16,14 @@ from huggingface_hub import snapshot_download
 load_dotenv()
 app = Flask(__name__)
 
+
 # -------------------------------------
 # Email + Flask Config
 # -------------------------------------
 with open('config.json', 'r') as f:
     params = json.load(f)['params']
 
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+app.secret_key = os.environ.get("SECRET_KEY", "dev-secret-key")
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
