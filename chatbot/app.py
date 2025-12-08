@@ -1,113 +1,135 @@
 import json
+import time
 from flask import Flask, render_template, request, session, redirect, url_for, jsonify
 from flask_mail import Mail, Message
 from random import randint
 import os
 from dotenv import load_dotenv
+
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import OllamaEmbeddings
 from langchain_core.prompts import PromptTemplate
-
-
 from langchain_groq import ChatGroq
 from huggingface_hub import snapshot_download
 
-
 load_dotenv()
+
 app = Flask(__name__)
 
+# -------------------------------------------------
+# SECURITY
+# -------------------------------------------------
+app.secret_key = os.environ.get("SECRET_KEY")  # REQUIRED ON RENDER
 
-# -------------------------------------
-# Email + Flask Config
-# -------------------------------------
-with open('config.json', 'r') as f:
-    params = json.load(f)['params']
-
-app.secret_key = os.environ.get("SECRET_KEY", "dev-secret-key")
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
-app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
-app.config['MAIL_USE_SSL'] = True
+# -------------------------------------------------
+# MAIL CONFIG
+# -------------------------------------------------
+app.config.update(
+    MAIL_SERVER='smtp.gmail.com',
+    MAIL_PORT=465,
+    MAIL_USE_SSL=True,
+    MAIL_USERNAME=os.getenv('MAIL_USERNAME'),
+    MAIL_PASSWORD=os.getenv('MAIL_PASSWORD'),
+    MAIL_TIMEOUT=10  # ✅ PREVENT SMTP HANG
+)
 
 mail = Mail(app)
 
-# -------------------------------------
-# ROUTES
-# -------------------------------------
+OTP_EXPIRY_SECONDS = 120  # ✅ 2 minutes
 
+# -------------------------------------------------
+# ROUTES
+# -------------------------------------------------
 @app.route("/")
 def home():
-    return render_template('home.html')
-
-
-@app.route("/register", methods=["GET", "POST"])
-def register():
-    if request.method == "POST":
-        return redirect(url_for('home'))
-    return render_template('register.html', msg="")
+    return render_template("home.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        return redirect(url_for('email'))
-    return render_template('login.html', msg="")
+        return redirect(url_for("email"))
+    return render_template("login.html")
 
 
 @app.route("/email")
 def email():
-    return render_template('email.html', msg="")
+    return render_template("email.html", msg="")
 
 
-@app.route('/verify', methods=["POST"])
+# -------------------------------------------------
+# ✅ SEND OTP (SAFE)
+# -------------------------------------------------
+@app.route("/verify", methods=["POST"])
 def verify():
-    gmail = request.form['email']
+    email = request.form["email"]
+
     otp = randint(1000, 9999)
-    session['otp'] = otp
-    msg = Message('OTP', sender=app.config['MAIL_USERNAME'], recipients=[gmail])
-    msg.body = str(otp)
-    mail.send(msg)
-    return render_template("verify.html", email=gmail)
+    session["otp"] = otp
+    session["otp_time"] = time.time()
+    session["email"] = email
+
+    msg = Message(
+        subject="Your OTP Verification Code",
+        sender=app.config["MAIL_USERNAME"],
+        recipients=[email],
+        body=f"Your OTP is {otp}. Valid for 2 minutes."
+    )
+
+    try:
+        mail.send(msg)
+    except Exception as e:
+        print("MAIL ERROR:", e)
+        return render_template("email.html", msg="Email service unavailable. Try again.")
+
+    return render_template("verify.html", email=email)
 
 
-@app.route('/validate', methods=["POST"])
+# -------------------------------------------------
+# ✅ VALIDATE OTP
+# -------------------------------------------------
+@app.route("/validate", methods=["POST"])
 def validate():
-    userotp = request.form['otp']
-    if session.get('otp') == int(userotp):
-        session.pop('otp', None)
-        return redirect(url_for('chat'))
-    return render_template('email.html', msg='Not verified! Please try again.')
+    user_otp = request.form["otp"]
+
+    stored_otp = session.get("otp")
+    otp_time = session.get("otp_time")
+
+    if not stored_otp or not otp_time:
+        return render_template("email.html", msg="Session expired. Try again.")
+
+    if time.time() - otp_time > OTP_EXPIRY_SECONDS:
+        session.clear()
+        return render_template("email.html", msg="OTP expired. Please retry.")
+
+    if int(user_otp) == int(stored_otp):
+        session.pop("otp")
+        session.pop("otp_time")
+        return redirect(url_for("chat"))
+
+    return render_template("verify.html", email=session.get("email"), msg="Invalid OTP")
 
 
-
-@app.route('/chat')
+@app.route("/chat")
 def chat():
-    return render_template('chat.html')
+    return render_template("chat.html")
 
-# -------------------------------------
-# RAG SETUP  
-# (FAISS + manual context injection to avoid LangChain bugs)
-# -------------------------------------
+# -------------------------------------------------
+# RAG SETUP
+# -------------------------------------------------
+groq_api_key = os.environ["GROQ_API_KEY"]
 
-groq_api_key = os.environ['GROQ_API_KEY']
-embeddings = OllamaEmbeddings(model='nomic-embed-text')
+embeddings = OllamaEmbeddings(model="nomic-embed-text")
 
-# Load your FAISS index
-# -------------------------------------
-# Download FAISS index from Hugging Face
-# -------------------------------------
-
-FAISS_REPO_ID = "ved123456/faiss-chatbot-index"  # ✅ CHANGE THIS
+FAISS_REPO_ID = "ved123456/faiss-chatbot-index"
 
 faiss_path = snapshot_download(
     repo_id=FAISS_REPO_ID,
-    repo_type="dataset",   # or "dataset" depending on how you uploaded
+    repo_type="dataset",
     local_dir="faiss_downloaded",
     local_dir_use_symlinks=False
 )
 
-# Load FAISS from downloaded directory
 db = FAISS.load_local(
     faiss_path,
     embeddings,
@@ -116,15 +138,11 @@ db = FAISS.load_local(
 
 retriever = db.as_retriever()
 
-
-retriever = db.as_retriever()
-
-# ---- FIXED WORKING PROMPT ----
 prompt = PromptTemplate(
     input_variables=["context", "question"],
     template="""
-Answer the question using ONLY the context below.
-If the answer is not in the context, reply exactly:
+Answer ONLY using the context below.
+If not found say:
 "I cannot find that information in the documents."
 
 <context>
@@ -135,56 +153,35 @@ Question: {question}
 """
 )
 
-# LLM
 llm = ChatGroq(
     groq_api_key=groq_api_key,
-    model='llama-3.1-8b-instant'
+    model="llama-3.1-8b-instant"
 )
 
-# ---- WORKING RAG FUNCTION ----
 def rag_answer(question):
-    # Step 1: retrieve docs from FAISS
     docs = retriever.get_relevant_documents(question)
+    context = "\n\n".join(d.page_content for d in docs if d.page_content.strip())
 
-    # Step 2: join text
-    context_text = "\n\n".join([doc.page_content for doc in docs if doc.page_content.strip()])
-
-    # Step 3: format prompt
-    final_prompt = prompt.format(
-        context=context_text,
-        question=question
+    response = llm.invoke(
+        prompt.format(context=context, question=question)
     )
+    return response.content
 
-    # Step 4: ask LLM
-    response = llm.invoke(final_prompt)
-
-    return response.content, docs
-
-
-# -------------------------------------
-# ASK ENDPOINT
-# -------------------------------------
-@app.route('/ask', methods=['POST'])
-def ask_question():
-    question = request.json.get('msg')
+# -------------------------------------------------
+# CHAT API
+# -------------------------------------------------
+@app.route("/ask", methods=["POST"])
+def ask():
+    data = request.json
+    question = data.get("msg")
 
     if not question:
-        return jsonify({'error': 'No question provided'}), 400
+        return jsonify({"error": "Empty question"}), 400
 
-    answer, docs = rag_answer(question)
+    answer = rag_answer(question)
 
-    print("\n--------------------")
-    print("🔍 RETRIEVED DOCUMENTS:")
-    for doc in docs:
-        print(doc.page_content[:300])
-        print("--------------------")
-    print("--------------------\n")
-
-    return jsonify({
-        "answer": answer,
-        "context": [doc.page_content[:200] for doc in docs]
-    })
+    return jsonify({"answer": answer})
 
 
-if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000)
