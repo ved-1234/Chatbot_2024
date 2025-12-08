@@ -1,4 +1,4 @@
-Installation and Setup
+# Installation and Setup
 Clone the Repository
 
 git clone https://github.com/ved-1234/Chatbot_2024.git
@@ -7,13 +7,13 @@ cd Chatbot_2024
 
 cd chatbot 
 
-Create Virtual Environment
+# Create Virtual Environment
 
 python -m venv venv
 
 source venv/bin/activate   # On Windows: venv\Scripts\activate
 
-Install Dependencies
+# Install Dependencies
 
 pip install -r requirements.txt
 
@@ -25,7 +25,7 @@ SECRET_KEY=your_secret_key
 
 GROQ_API_KEY=your_groq_api_key
 
-#MailGun service
+# MailGun service
 
 MAILGUN_API_KEY=your_mailgun_api_key
 
