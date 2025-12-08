@@ -44,6 +44,14 @@ OTP_EXPIRY_SECONDS = 120  # ✅ 2 minutes
 def home():
     return render_template("home.html")
 
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == "POST":
+        # later you can add DB logic here
+        return redirect(url_for("login"))
+    return render_template("register.html")
+
+
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
