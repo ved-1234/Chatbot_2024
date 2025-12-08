@@ -19,7 +19,8 @@ app = Flask(__name__)
 # -------------------------------------------------
 # SECURITY
 # -------------------------------------------------
-app.secret_key = os.environ.get("SECRET_KEY")  # REQUIRED ON RENDER
+app.secret_key = os.environ.get("SECRET_KEY", "dev-secret-key")
+
 
 # -------------------------------------------------
 # MAIL CONFIG
