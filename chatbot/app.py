@@ -1,9 +1,9 @@
 import json
 import time
+import os
+from random import randint
 from flask import Flask, render_template, request, session, redirect, url_for, jsonify
 from flask_mail import Mail, Message
-from random import randint
-import os
 from dotenv import load_dotenv
 
 from langchain_community.vectorstores import FAISS
@@ -12,31 +12,33 @@ from langchain_core.prompts import PromptTemplate
 from langchain_groq import ChatGroq
 from huggingface_hub import snapshot_download
 
+# -------------------------------------------------
+# LOAD ENV
+# -------------------------------------------------
 load_dotenv()
 
+# -------------------------------------------------
+# APP SETUP
+# -------------------------------------------------
 app = Flask(__name__)
+app.secret_key = os.environ.get("SECRET_KEY", "dev-secret-key")  # ✅ REQUIRED ON RENDER
+
+OTP_EXPIRY_SECONDS = 120  # ✅ 2 minutes
 
 # -------------------------------------------------
-# SECURITY
-# -------------------------------------------------
-app.secret_key = os.environ.get("SECRET_KEY", "dev-secret-key")
-
-
-# -------------------------------------------------
-# MAIL CONFIG
+# ✅ MAILGUN CONFIG (SMTP)
 # -------------------------------------------------
 app.config.update(
-    MAIL_SERVER='smtp.gmail.com',
-    MAIL_PORT=465,
-    MAIL_USE_SSL=True,
-    MAIL_USERNAME=os.getenv('MAIL_USERNAME'),
-    MAIL_PASSWORD=os.getenv('MAIL_PASSWORD'),
-    MAIL_TIMEOUT=10  # ✅ PREVENT SMTP HANG
+    MAIL_SERVER="smtp.mailgun.org",
+    MAIL_PORT=587,
+    MAIL_USE_TLS=True,
+    MAIL_USERNAME=f"postmaster@{os.getenv('MAILGUN_DOMAIN')}",
+    MAIL_PASSWORD=os.getenv("MAILGUN_API_KEY"),
+    MAIL_DEFAULT_SENDER=os.getenv("MAILGUN_FROM"),
+    MAIL_TIMEOUT=10  # ✅ PREVENT HANG / WORKER KILL
 )
 
 mail = Mail(app)
-
-OTP_EXPIRY_SECONDS = 120  # ✅ 2 minutes
 
 # -------------------------------------------------
 # ROUTES
@@ -45,13 +47,12 @@ OTP_EXPIRY_SECONDS = 120  # ✅ 2 minutes
 def home():
     return render_template("home.html")
 
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        # later you can add DB logic here
         return redirect(url_for("login"))
     return render_template("register.html")
-
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -67,7 +68,7 @@ def email():
 
 
 # -------------------------------------------------
-# ✅ SEND OTP (SAFE)
+# ✅ SEND OTP (MAILGUN SAFE)
 # -------------------------------------------------
 @app.route("/verify", methods=["POST"])
 def verify():
@@ -80,7 +81,6 @@ def verify():
 
     msg = Message(
         subject="Your OTP Verification Code",
-        sender=app.config["MAIL_USERNAME"],
         recipients=[email],
         body=f"Your OTP is {otp}. Valid for 2 minutes."
     )
@@ -112,8 +112,8 @@ def validate():
         return render_template("email.html", msg="OTP expired. Please retry.")
 
     if int(user_otp) == int(stored_otp):
-        session.pop("otp")
-        session.pop("otp_time")
+        session.pop("otp", None)
+        session.pop("otp_time", None)
         return redirect(url_for("chat"))
 
     return render_template("verify.html", email=session.get("email"), msg="Invalid OTP")
@@ -124,7 +124,7 @@ def chat():
     return render_template("chat.html")
 
 # -------------------------------------------------
-# RAG SETUP
+# ✅ RAG SETUP
 # -------------------------------------------------
 groq_api_key = os.environ["GROQ_API_KEY"]
 
@@ -188,9 +188,11 @@ def ask():
         return jsonify({"error": "Empty question"}), 400
 
     answer = rag_answer(question)
-
     return jsonify({"answer": answer})
 
 
+# -------------------------------------------------
+# RUN
+# -------------------------------------------------
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
